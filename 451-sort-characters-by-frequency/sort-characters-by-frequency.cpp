@@ -39,8 +39,12 @@ public:
         });
 
         string result = "";
-        for (auto &[ch, cnt] : arr) {
-            result += string(cnt, ch);
+        for(int i=0;i<arr.size();i++){
+            char ch=arr[i].first;
+            int cnt=arr[i].second;
+            for(int j=0;j<cnt;j++){
+                result+=ch;
+            }
         }
 
         return result;
